@@ -25,6 +25,8 @@
 # Try to run the following line using ctrl + return:
 41 + 1
 
+
+
 # PS: You probably noticed that there is a # in front of each line. Everything 
 # start starts with a # is called a "comment". If I would leave my explanations 
 # uncommented, R would try to interpret the text as code (which doesn't make 
@@ -84,15 +86,44 @@ typeof(3.2)
 # Let's take a look at how we can "produce" logicals.
 
 # 3.1) Run 12 > 3.
+12>3
+
 
 # 3.1) Run 12 == 12. What does it do? What happens if you try 12 = 12 instead?
+12==12
+12=12
+#vergleich nur mit 2x == anderes funktioniert nicht 
 
 # 3.2) What is "cat" != "dog"?
+"cat" !="dog"
+# benutzt man für ungleichheit!
+!12==12
 
 # 3.3) Try out: FALSE & FALSE, then FALSE & TRUE and finally, TRUE & TRUE. 
 #      What happens?
+FALSE & FALSE
+FALSE & TRUE
+TRUE & TRUE
+# & ist ein UND
 
 # 3.4) Try the same as above, but replace & with | (alt gr + <). What does | do?
+
+FALSE |  FALSE
+FALSE |   TRUE
+TRUE |TRUE
+# ist ein ODER
+
+
+FALSE + FALSE
+FALSE + TRUE
+TRUE + TRUE
+#
+
+FALSE < FALSE
+FALSE < TRUE
+TRUE < TRUE
+
+
 
 ## OPTIONAL --------------------------------------------------------------------
 
@@ -121,7 +152,10 @@ typeof(3.2)
 # something to a variable. It works like this:
 
 single_number <- 7
+#kleiner pfeilt, zuordnung von Variableb
 
+<-<-<-
+  
 # By the way: There is a shortcut in RStudio that produces the little arrow <-
 # Try it out: alt + -
 
@@ -133,6 +167,10 @@ single_number <- 7
 single_number <- 2
 
 # 4.3) Assign something to a variable with a name of your choice.
+
+hallo <- "Elli"
+
+
 
 # 4.4) Examine what happens here. What is the result? What do you think will 
 #      single_number contain now? 2 or 6? Run single_number in the console to 
@@ -149,9 +187,17 @@ number2 + number6
 multiplied <- number2 * number6
 multiplied
 
+# = gleichzeichen kann statt pfeil verwendet werden, jedoch == bedeutet dass es gleich gesetzt ist 
+
+
 # 4.6) Try to run this line, which contains a variable we didn't assign anything 
 #      to yet. What happens?
+
 empty_variable
+
+leere_variable <-
+  
+  
 
 ## NOTE ------------------------------------------------------------------------
 
@@ -261,6 +307,7 @@ T
 # environment by running the command:
 
 rm(list = ls())
+#löscht alles aus dem Kontainer
 
 # While R offers you to save the content of your environment whenever you close 
 # your session, it's best practice not to do that. You can tell RStudio that it 
